@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4d4d4d" > 
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/controllBright"
+        android:orientation="vertical" >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/darker_gray" >
+
+            <com.skyled.skytouch5.thirdpart.TextViewN
+                android:id="@+id/headStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:text="Редактирование"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000" />
+
+            <com.skyled.skytouch5.thirdpart.TextViewN
+                android:id="@+id/changeBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="10dp"
+                android:text="ГОТОВО"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/holo_red_light" />
+
+            <com.skyled.skytouch5.thirdpart.TextViewN
+                android:id="@+id/MainBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="НАЗАД"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.skyled.skytouch5.thirdpart.Shedule
+        android:id="@+id/shedule1"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textMode"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="38dp"
+        android:padding="0dp" />
+
+    <com.skyled.skytouch5.thirdpart.TextViewN
+        android:id="@+id/textMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/shedule1"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginTop="32dp"
+        android:text="Изменить Имя:"
+        android:textColor="#000000"
+        android:textSize="26dp" />
+
+    <com.skyled.skytouch5.thirdpart.TextViewN
+        android:id="@+id/textViewN2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/shedule1"
+        android:layout_below="@+id/textMode"
+        android:layout_marginTop="21dp"
+        android:text="расписание всех пресетов:"
+        android:textColor="#000000"
+        android:textScaleX="1.35"
+        android:textSize="21dp" />
+
+    <RelativeLayout
+        android:id="@+id/startPointForWraper"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_alignLeft="@+id/textMode"
+        android:layout_alignRight="@+id/editText1"
+        android:layout_below="@+id/textMode"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="11dp"
+        android:background="#000000" >
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textMode"
+        android:layout_alignBottom="@+id/textMode"
+        android:layout_alignRight="@+id/editText1"
+        android:layout_marginLeft="23dp"
+        android:layout_toRightOf="@+id/textMode"
+        android:background="@drawable/edit_text_bg"
+        android:ems="10"
+        android:hint="Пресет 1"
+        android:inputType="textPersonName" >
+    </EditText>
+
+    <RelativeLayout
+        android:layout_width="450dp"
+        android:layout_height="1dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="270dp"
+        android:background="#000000"
+        android:rotation="90" >
+    </RelativeLayout>
+
+    <com.skyled.skytouch5.thirdpart.TextViewN
+        android:id="@+id/textViewN3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textViewN2"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="86dp"
+        android:text="Включить Расписание:"
+        android:textColor="#000000"
+        android:textSize="22dp" />
+
+    <ToggleButton
+        android:id="@+id/switchRedactor"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_above="@+id/textViewN2"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="2dp"
+        android:background="@drawable/preset_togle"
+        android:textOff=""
+        android:textOn="" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_alignRight="@+id/switchRedactor"
+        android:layout_below="@+id/textViewN3"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="11dp"
+        android:background="#000000" >
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/switchRedactor"
+        android:layout_marginRight="22dp"
+        android:layout_toLeftOf="@+id/textViewN3"
+        android:src="@drawable/clock" />
+
+    <com.skyled.skytouch5.thirdpart.TextViewN
+        android:id="@+id/timeOn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView1"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_toRightOf="@+id/textView1"
+        android:background="@drawable/edit_text_bg"
+        android:text="00:00"
+        android:textColor="#000000"
+        android:textSize="26dp" />
+
+    <com.skyled.skytouch5.thirdpart.TextViewN
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView1"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_marginLeft="39dp"
+        android:layout_toRightOf="@+id/timeOn"
+        android:text="OFF:"
+        android:textColor="#000000"
+        android:textSize="26dp" />
+
+    <com.skyled.skytouch5.thirdpart.TextViewN
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_toRightOf="@+id/textView2"
+        android:background="@drawable/edit_text_bg"
+        android:text="00:00"
+        android:textColor="#000000"
+        android:textSize="26dp" />
+
+    <com.skyled.skytouch5.thirdpart.TextViewN
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textViewN2"
+        android:layout_toRightOf="@+id/imageView1"
+        android:text="ON:"
+        android:textColor="#000000"
+        android:textSize="26dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/timeOn"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="#33ffffff"
+        android:orientation="vertical"
+        android:padding="20dp" > 
+
+        <com.skyled.skytouch5.thirdpart.TextViewN
+            android:id="@+id/textViewN4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Повторять (дни недели):"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+
+        <com.skyled.skytouch5.thirdpart.weekBtns
+            android:id="@+id/weekBtns1"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp" />
+    </LinearLayout>
+
+    <com.skyled.skytouch5.thirdpart.TextViewN
+        android:id="@+id/textViewN5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/imageView1"
+        android:text="Только при срабатывании:"
+        android:textColor="#000000"
+        android:textSize="22dp" />
+
+    <com.skyled.skytouch5.thirdpart.TextViewN
+        android:id="@+id/textViewN6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_alignLeft="@+id/textViewN5"
+        android:layout_alignRight="@+id/textViewN5"
+        android:layout_below="@+id/textViewN5"
+        android:textSize="22dp"
+        android:background="@drawable/edit_text_bg"
+        android:textColor="#000000"
+        android:text="датчик 1" />
+
+    <com.skyled.skytouch5.thirdpart.TextViewN
+        android:id="@+id/textViewN7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewN6"
+        android:layout_below="@+id/textViewN6"
+        android:textColor="#000000"
+        android:textScaleX="0.8"
+        android:layout_marginTop="5dp"
+        android:textSize="14dp"
+        android:text="возврат в предыдущее состояние через:" />
+
+    <com.skyled.skytouch5.thirdpart.TextViewN
+        android:id="@+id/textViewN8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewN7"
+        android:layout_alignBottom="@+id/textViewN7"
+        android:layout_toRightOf="@+id/textViewN7"
+        android:background="@drawable/edit_text_bg"
+        android:textColor="#000000"
+        android:padding="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="3dp"
+        android:text="00:00" />
+
+    <com.skyled.skytouch5.thirdpart.TextViewN
+        android:id="@+id/textViewN9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewN7"
+        android:layout_below="@+id/textViewN8"
+        android:layout_marginTop="24dp"
+        android:textSize="22dp"
+        android:textColor="#000000"
+        android:text="При состоянии системы:" />
+
+    <com.skyled.skytouch5.thirdpart.TextViewN
+        android:id="@+id/textViewN10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      	 android:layout_alignLeft="@+id/textViewN5"
+        android:layout_alignRight="@+id/textViewN5"
+        android:layout_below="@+id/textViewN9"
+        android:layout_marginTop="5dp"
+         android:textSize="24dp"
+        android:background="@drawable/edit_text_bg"
+        android:textColor="#000000"
+        android:text="освещение выключено" />
+
+    <RelativeLayout
+        android:id="@+id/block_wraper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/startPointForWraper"
+        android:background="#CC000000" >
+    </RelativeLayout>
+   
+</RelativeLayout>

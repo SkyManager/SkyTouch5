@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="50dp"
+    android:paddingRight="50dp"
+    android:background="#00ffffff" >
+
+                   <net.simonvt.numberpicker.NumberPicker
+                       android:id="@+id/np_time1"
+                       android:layout_width="70dp"
+                       android:layout_height="wrap_content"
+                       android:layout_alignBaseline="@+id/np_time2"
+                       android:layout_alignBottom="@+id/np_time2"
+                       android:layout_marginLeft="16dp"
+                       android:layout_toRightOf="@+id/np_time2"
+                        >
+                   </net.simonvt.numberpicker.NumberPicker>
+
+                   <net.simonvt.numberpicker.NumberPicker
+                       android:id="@+id/np_time2"
+                       android:layout_width="70dp"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentLeft="true"
+                       android:layout_alignParentTop="true"
+                       android:layout_marginTop="14dp"
+                      >
+                   </net.simonvt.numberpicker.NumberPicker>
+    
+</RelativeLayout>

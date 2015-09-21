@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="3dp"
+         >
+
+    <com.skyled.skytouch5.thirdpart.PresetView
+        android:id="@+id/presetView_forList"
+        android:layout_width="480dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+       />
+        <RelativeLayout
+        android:id="@+id/wraper_btn_preset"
+        android:layout_width="320dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/presetView_forList" >
+    </RelativeLayout>
+    </RelativeLayout> 

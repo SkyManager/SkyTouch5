@@ -1,0 +1,398 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activityLay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    tools:context=".MainActivity" >
+
+    <RelativeLayout
+        android:id="@+id/wraper"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/controllBright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="108dp" >
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/buttonChange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="66dp"
+        android:text="Button"
+        android:visibility="invisible" />
+
+<!--     <CheckBox
+        android:id="@+id/checkerActivation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button1"
+        android:layout_alignTop="@+id/button1"
+        android:layout_marginLeft="40dp"
+        android:button="@drawable/check_box_background"
+        android:text="Не менять при активации"
+        android:textColor="#fff" /> -->
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/controllBright"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="478dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/darker_gray"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp" >
+
+            <com.skyled.skytouch5.thirdpart.TextViewN
+                android:id="@+id/headStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000" />
+
+            <com.skyled.skytouch5.thirdpart.TextViewN
+                android:id="@+id/MainBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="НАЗАД"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#fff" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" >
+
+            <com.skyled.skytouch5.thirdpart.TextViewN
+                android:id="@+id/addBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="#4d4d4d"
+                android:paddingBottom="3dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="3dp"
+                android:text="Основной"
+                android:textColor="#fff"
+                android:textSize="24dp" />
+
+            <com.skyled.skytouch5.thirdpart.TextViewN
+                android:id="@+id/editBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:background="#4d4d4d"
+                android:paddingBottom="3dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="3dp"
+                android:text="Пресеты"
+                android:textColor="#fff"
+                android:textSize="24dp" />
+
+            <com.skyled.skytouch5.thirdpart.TextViewN
+                android:id="@+id/offBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:background="#4d4d4d"
+                android:paddingBottom="3dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:paddingTop="3dp"
+                android:text="Эффекты"
+                android:textColor="#fff"
+                android:textSize="24dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/presetList"
+        android:layout_width="480dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/linearLayout1"
+        android:scrollbars="none"
+        android:visibility="gone" >
+    </ListView>
+    
+       <ListView
+        android:id="@+id/chanalstList"
+        android:layout_width="480dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/linearLayout1"
+        android:scrollbars="none"
+        android:visibility="gone" 
+        >
+    </ListView>
+
+    <!-- Arcs and circle for color brightness and saturation changing -->
+
+    <com.skyled.skytouch5.thirdpart.SeekArc
+        android:id="@+id/seekArc1"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_alignLeft="@+id/buttonChange"
+        android:layout_marginTop="158dp"
+        android:animateLayoutChanges="true"
+        android:padding="40dp" />
+
+    <com.skyled.skytouch5.thirdpart.SeekArc
+        android:id="@+id/seekArc2"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_alignLeft="@+id/buttonChange"
+        android:layout_marginTop="158dp"
+        android:animateLayoutChanges="true"
+        android:padding="40dp" />
+
+    <com.skyled.skytouch5.thirdpart.ColorPicker
+        android:id="@+id/colorPicker1"
+        android:layout_width="360dp"
+        android:layout_height="360dp"
+        android:layout_alignLeft="@+id/buttonChange"
+        android:layout_marginLeft="-5dp"
+        android:layout_marginTop="155dp"
+        android:animateLayoutChanges="true"
+        android:padding="100dp" />
+
+    <com.skyled.skytouch5.thirdpart.controlPanel
+        android:id="@+id/cPanel"
+        android:layout_width="400dp"
+        android:layout_height="90dp"
+        android:layout_marginLeft="40dp"
+         android:layout_marginTop="50dp" 
+         />
+
+    <!-- Buffer layout which contains info for changing in preset when it choosing -->
+
+    <ImageView
+        android:id="@+id/ON_OFF"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="250dp"
+        android:layout_toRightOf="@+id/controllBright"
+        android:src="@drawable/onoff" />
+
+    <!-- Additional chanal for main window controling -->
+
+    <!-- <RelativeLayout
+        android:id="@+id/chanals_main_controler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="40dp"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.skyled.skytouch5.thirdpart.ChanalView
+                android:id="@+id/chanal1"
+                android:layout_width="480dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="3dp" />
+
+            <com.skyled.skytouch5.thirdpart.ChanalView
+                android:id="@+id/chanal2"
+                android:layout_width="480dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="3dp" />
+
+            <com.skyled.skytouch5.thirdpart.ChanalView
+                android:id="@+id/chanal3"
+                android:layout_width="480dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="3dp" />
+
+            <com.skyled.skytouch5.thirdpart.ChanalView
+                android:id="@+id/chanal4"
+                android:layout_width="480dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="3dp" />
+
+            <com.skyled.skytouch5.thirdpart.ChanalView
+                android:id="@+id/chanal5"
+                android:layout_width="480dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="3dp" />
+        </LinearLayout>
+    </RelativeLayout> -->
+
+    <!-- Left bar for color changing with number picker -->
+
+    <SlidingDrawer
+        android:id="@+id/slidingDrawer1"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="120dp"
+        android:content="@+id/content"
+        android:gravity="center_horizontal"
+        android:handle="@+id/handle"
+        android:orientation="vertical"
+        android:rotation="90" >
+
+        <Button
+            android:id="@+id/handle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Точная настройка" />
+        <!--
+                            100% — FF
+							95% — F2
+							90% — E6
+							85% — D9
+							80% — CC
+							75% — BF
+							70% — B3
+							65% — A6
+							60% — 99
+							55% — 8C
+							50% — 80
+							45% — 73
+							40% — 66
+							35% — 59
+							30% — 4D
+							25% — 40
+							20% — 33
+							15% — 26
+							10% — 1A
+							5% — 0D
+							0% — 00
+        -->
+
+        <RelativeLayout
+            android:id="@+id/content"
+            android:layout_width="56dp"
+            android:layout_height="326dp"
+            android:background="@drawable/sliding_drawer_bg" >
+
+            <net.simonvt.numberpicker.NumberPicker
+                android:id="@+id/np1"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="300dp"
+                android:rotation="270" />
+
+            <net.simonvt.numberpicker.NumberPicker
+                android:id="@+id/np2"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="165dp"
+                android:rotation="270" />
+
+            <net.simonvt.numberpicker.NumberPicker
+                android:id="@+id/np3"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="30dp"
+                android:rotation="270" />
+
+            <com.skyled.skytouch5.thirdpart.TextViewN
+                android:id="@+id/textMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="370dp"
+                android:rotation="270"
+                android:text="Red"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="26dp" />
+
+            <com.skyled.skytouch5.thirdpart.TextViewN
+                android:id="@+id/textViewN2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="240dp"
+                android:rotation="270"
+                android:text="Green"
+                android:textColor="@android:color/holo_green_light"
+                android:textSize="26dp" />
+
+            <com.skyled.skytouch5.thirdpart.TextViewN
+                android:id="@+id/textViewN3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="29dp"
+                android:layout_marginTop="105dp"
+                android:rotation="270"
+                android:text="Blue"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="26dp" />
+        </RelativeLayout>
+    </SlidingDrawer>
+
+    <com.skyled.skytouch5.thirdpart.CustomDigitalClock
+        android:id="@+id/Digitalclock"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:layout_marginLeft="400dp"
+        android:layout_marginTop="330dp"
+        android:gravity="center"
+        android:shadowColor="@android:color/darker_gray"
+        android:shadowRadius="16"
+        android:text="DigitalClock"
+        android:textColor="@android:color/black"
+        android:textSize="100dp"
+        android:visibility="gone" />
+
+    <com.skyled.skytouch5.thirdpart.RightPanel
+        android:id="@+id/rightPanel1"
+        android:layout_width="160dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/linearLayout1" />
+    
+     <ScrollView
+        android:id="@+id/templateContainer"
+        android:layout_width="480dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+      	 android:layout_alignTop="@+id/rightPanel1" >
+
+       <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+    <com.skyled.skytouch5.thirdpart.ChanalsRedactor
+        android:id="@+id/preset_lay_temp"
+        android:layout_width="480dp"
+        android:layout_height="1400dp"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:layout_alignTop="@+id/rightPanel1" />
+       </LinearLayout>
+    </ScrollView>
+    
+
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="3dp"
+         >
+
+    
+    <com.skyled.skytouch5.thirdpart.ChanalView
+        android:id="@+id/chanalView_forList"
+        android:layout_width="480dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+       />
+    </RelativeLayout> 
